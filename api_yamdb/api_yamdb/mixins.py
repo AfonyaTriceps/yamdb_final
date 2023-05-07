@@ -4,7 +4,7 @@ from rest_framework.serializers import BaseSerializer
 
 from user.validators import validate_username
 
-from .permissions import IsAdminOwnerModeratorOrReadOnly
+from .permissions import IsAdminOwnerModerOrRdOnly
 
 
 class ListCreateDestroyViewSet(
@@ -13,7 +13,7 @@ class ListCreateDestroyViewSet(
     mixins.DestroyModelMixin,
     viewsets.GenericViewSet,
 ):
-    permission_classes = (IsAdminOwnerModeratorOrReadOnly,)
+    permission_classes = (IsAdminOwnerModerOrRdOnly,)
     pagination_class = LimitOffsetPagination
     filter_backends = (filters.SearchFilter,)
     search_fields = ('name',)

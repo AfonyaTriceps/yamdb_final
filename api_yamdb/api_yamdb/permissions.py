@@ -13,7 +13,7 @@ class ReadOnly(permissions.BasePermission):
         return request.method in permissions.SAFE_METHODS
 
 
-class IsAdminOwnerModeratorOrReadOnly(permissions.BasePermission):
+class IsAdminOwnerModerOrRdOnly(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         del view
         return (

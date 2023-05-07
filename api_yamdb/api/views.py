@@ -13,11 +13,7 @@ from api.serializers import (
     TitleWriteSerializer,
 )
 from api_yamdb.mixins import ListCreateDestroyViewSet
-from api_yamdb.permissions import (
-    IsAdmin,
-    IsAdminOwnerModeratorOrReadOnly,
-    ReadOnly,
-)
+from api_yamdb.permissions import IsAdmin, IsAdminOwnerModerOrRdOnly, ReadOnly
 from reviews.filters import TitleFilter
 from reviews.models import Category, Genre, Review, Title
 
@@ -56,7 +52,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
     serializer_class = ReviewSerializer
     pagination_class = PageNumberPagination
     permission_classes = (
-        IsAdminOwnerModeratorOrReadOnly,
+        IsAdminOwnerModerOrRdOnly,
         permissions.IsAuthenticatedOrReadOnly,
     )
 
@@ -78,7 +74,7 @@ class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
     pagination_class = PageNumberPagination
     permission_classes = (
-        IsAdminOwnerModeratorOrReadOnly,
+        IsAdminOwnerModerOrRdOnly,
         permissions.IsAuthenticatedOrReadOnly,
     )
 
