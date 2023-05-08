@@ -1,5 +1,7 @@
 # Проект YaMDb
 
+![example workflow](https://github.com/AfonyaTriceps/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 * Проект YaMDb собирает отзывы пользователей на произведения. Сами
 произведения в YaMDb не хранятся, здесь нельзя посмотреть фильм или
 послушать музыку.
@@ -30,7 +32,7 @@
 Клонировать репозиторий и далее перейти в него.
 
 ```bash
-git clone git@github.com:AfonyaTriceps/infra_sp2.git
+git clone git@github.com:AfonyaTriceps/yamdb_final.git
 ```
 
 Переходим в папку с файлом docker-compose.yaml:
