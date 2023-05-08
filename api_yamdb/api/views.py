@@ -57,11 +57,10 @@ class ReviewViewSet(viewsets.ModelViewSet):
     )
 
     def get_title(self):
-        title = get_object_or_404(
+        return get_object_or_404(
             Title,
             id=self.kwargs.get('title_id'),
         )
-        return title
 
     def get_queryset(self):
         return self.get_title().reviews.select_related('author').all()
@@ -79,11 +78,10 @@ class CommentViewSet(viewsets.ModelViewSet):
     )
 
     def get_review(self):
-        review = get_object_or_404(
+        return get_object_or_404(
             Review,
             id=self.kwargs.get('review_id'),
         )
-        return review
 
     def get_queryset(self):
         return self.get_review().comments.select_related('author').all()
