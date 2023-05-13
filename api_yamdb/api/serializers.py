@@ -2,7 +2,6 @@ from django.core.validators import MaxValueValidator
 from django.utils import timezone
 from rest_framework import serializers
 
-
 from reviews.models import Category, Comment, Genre, Review, Title
 
 
