@@ -4,14 +4,9 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, permissions, viewsets
 from rest_framework.pagination import PageNumberPagination
 
-from api.serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitleReadSerializer,
-    TitleWriteSerializer,
-)
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             GenreSerializer, ReviewSerializer,
+                             TitleReadSerializer, TitleWriteSerializer,)
 from api_yamdb.mixins import ListCreateDestroyViewSet
 from api_yamdb.permissions import IsAdmin, IsAdminOwnerModerOrRdOnly, ReadOnly
 from reviews.filters import TitleFilter
